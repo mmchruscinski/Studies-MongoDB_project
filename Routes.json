@@ -1,0 +1,12 @@
+[    {      "startStation": "Warszawa Centralna",        
+            "endStation": "Kraków Główny",      
+            "travelTime": "3 hours",      
+            "price": 50.00    },  
+        {  "startStation": "Gdańsk Główny",
+            "endStation": "Wrocław Główny",
+            "travelTime": "6 hours",
+            "price": 80.00    },
+        {  "startStation": "Poznań Główny",
+            "endStation": "Szczecin Główny", 
+            "travelTime": "2 hours", 
+           "price": 30.00    }]

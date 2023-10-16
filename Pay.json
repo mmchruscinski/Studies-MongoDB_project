@@ -1,0 +1,9 @@
+[    {  "amount": 50.00,
+        "paymentMethod": "Credit Card",
+        "transactionDate": "2023-05-15 12:00:00"    },
+     {  "amount": 80.00,
+        "paymentMethod": "PayPal",
+        "transactionDate": "2023-05-18 10:00:00"    },
+    {    "amount": 30.00,
+        "paymentMethod": "Debit Card",
+        "transactionDate": "2023-05-20 14:30:00"    }]

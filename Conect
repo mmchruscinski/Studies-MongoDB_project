@@ -1,0 +1,28 @@
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
+
+public class Conect {
+    public static void main(String[] args) {
+        // tworzenie połączenia z bazą danych
+        MongoClientURI uri = new MongoClientURI("mongodb://localhost:27017");
+        MongoClient mongoClient = new MongoClient(uri);
+        MongoDatabase database = mongoClient.getDatabase("Bilety");
+
+        // pobieranie kolekcji
+        MongoCollection<Document> collection = database.getCollection("Routes");
+
+        // pobieranie wszystkich dokumentów z kolekcji
+        MongoCursor<Document> cursor = collection.find().iterator();
+        while (cursor.hasNext()) {
+            Document doc = cursor.next();
+            System.out.println(doc.toJson());
+        }
+
+        // zamykanie połączenia z bazą danych
+        mongoClient.close();
+    }
+}
